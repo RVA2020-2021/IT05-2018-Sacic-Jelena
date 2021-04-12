@@ -2,6 +2,8 @@ package rva.ctrls;
 
 import java.util.Collection;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -72,6 +74,7 @@ public class RacunRestController {
 	}
 	
 	//delete
+	//@Transactional
 	@DeleteMapping("racun/{id}")
 	@ApiOperation(value = "Briše raèun èija id vrednost odgovara vrednosti prosleðene path varijable id.")
 	public ResponseEntity<Racun> deleteRacun(@PathVariable("id") Integer id){
