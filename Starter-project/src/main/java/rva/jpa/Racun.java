@@ -37,6 +37,7 @@ public class Racun implements Serializable {
 	private List<StavkaRacuna> stavkaRacunas;
 
 	public Racun() {
+		
 	}
 
 	public Integer getId() {
