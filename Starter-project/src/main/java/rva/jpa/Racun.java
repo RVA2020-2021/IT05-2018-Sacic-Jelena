@@ -33,10 +33,11 @@ public class Racun implements Serializable {
 
 	//bi-directional many-to-one association to StavkaRacuna
 	@JsonIgnore
-	@OneToMany(mappedBy="racun")
+	@OneToMany(mappedBy="racun", cascade = {CascadeType.DETACH, CascadeType.REMOVE})
 	private List<StavkaRacuna> stavkaRacunas;
 
 	public Racun() {
+		
 	}
 
 	public Integer getId() {
